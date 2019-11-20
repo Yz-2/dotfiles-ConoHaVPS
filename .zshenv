@@ -14,12 +14,11 @@ export LANG=ja_JP.UTF-8
 # 言語PATH env
 ##################
 
-# golang
+# Golang
+export GOENV_DISABLE_GOPATH=1
 export GOENV_ROOT=$HOME/.goenv
 export PATH=$GOENV_ROOT/bin:$PATH
 eval "$(goenv init -)"
-
-# GOPATH 
 export GOPATH=$HOME/go
 PATH=$PATH:$GOPATH/bin
 
