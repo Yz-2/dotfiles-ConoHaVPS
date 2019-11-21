@@ -5,7 +5,7 @@ typeset -U path PATH cdpath fpath manpath
 
 # Pathを設定
 path=(/usr/local/bin(N-/) /usr/bin(N-/) /bin(N-/) $path)
-path=(/usr/local/sbin(N-/) ,/usr/sbin(N-/) ,/sbin(N-/) $path)
+path=(/usr/local/sbin(N-/) /usr/sbin(N-/) /sbin(N-/) $path)
 
 # 環境変数
 export LANG=ja_JP.UTF-8
