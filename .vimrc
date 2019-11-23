@@ -1,26 +1,6 @@
-"""""""""""""""""""""""""""""
-" ペーストモード
-""""""""""""""""""""""""""""
-if &term =~ "xterm"
-    let &t_ti .= "\e[?2004h"
-    let &t_te .= "\e[?2004l"
-    let &pastetoggle = "\e[201~"
-
-    function XTermPasteBegin(ret)
-        set paste
-        return a:ret
-    endfunction
-
-    noremap <special> <expr> <Esc>[200~ XTermPasteBegin("0i")
-    inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
-    cnoremap <special> <Esc>[200~ <nop>
-    cnoremap <special> <Esc>[201~ <nop>
-endif
-
 """"""""""""""""""""""""""""""
 " 各種オプションの設定 
 """"""""""""""""""""""""""""""
-
 " 挙動を vi 互換ではなく、Vim のデフォルト設定にする
 set nocompatible
 " 一旦ファイルタイプ関連を無効化する
@@ -56,7 +36,15 @@ set ignorecase
 set incsearch
 " インデント
 set autoindent
-" シンタックス
-syntax on
 " コピペ
 set paste
+" syntaxを有効
+syntax enable
+" 背景
+set background=dark
+" カラースキーマの指定
+colorscheme solarized
+" 行番号の色
+" highlight LineNr ctermfg=darkyellow
+" clipboard連携
+set clipboard+=unnamed
