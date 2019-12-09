@@ -22,4 +22,6 @@ eval "$(goenv init -)"
 export GOPATH=$HOME/go
 PATH=$PATH:$GOPATH/bin
 
-
+# direnv
+export EDITOR=vim
+eval "$(direnv hook zsh)"
