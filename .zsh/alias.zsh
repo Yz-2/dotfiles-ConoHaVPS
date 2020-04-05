@@ -33,3 +33,6 @@ alias gp='git push'
 ## zsh
 alias sz='source ~/.zshrc'
 alias vz='vim ~/.zshrc'
+
+## $PATH
+alias epath='echo $PATH | tr ":" "\n"'

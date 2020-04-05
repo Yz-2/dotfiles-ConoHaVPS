@@ -45,6 +45,6 @@ set background=dark
 " カラースキーマの指定
 colorscheme solarized
 " 行番号の色
-" highlight LineNr ctermfg=darkyellow
+highlight LineNr ctermfg=darkyellow
 " clipboard連携
 set clipboard+=unnamed
